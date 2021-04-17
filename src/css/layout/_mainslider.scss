@@ -1,0 +1,72 @@
+.mainslider {
+    height: 76.2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+
+    @include respondmax(sm){
+        height: 46.2rem;
+    }
+
+    &__center {
+        max-width: 107.6rem;
+        height: 58rem;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include respondmax(sm){
+            max-width: 100%;
+            height: 22rem;
+        }
+       
+     // animation: movebox 5.6s infinite;
+    }
+
+    h1 {
+        @include font($pmr, 4rem, #fff);
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 9.2rem;
+
+
+         strong{
+            @include font($pbb);
+        }
+
+        @include respondmax(sm){
+            font-size: 2rem;
+            top: 5.2rem;
+        }
+    }
+}
+
+
+/* @keyframes movebox {
+    0% {
+        top: 35%;
+        box-shadow: 0px 28px 17px -4px rgba(0, 0, 0, 0.37);
+    }
+    25%{
+        top: 34%;
+        box-shadow: 0px 35px 17px -4px rgba(0, 0, 0, 0.37);
+    }
+    50%{
+        top: 35%;
+        box-shadow: 0px 28px 17px -4px rgba(0, 0, 0, 0.37);
+    }
+    75%{
+        top: 34%;
+        box-shadow: 0px 35px 17px -4px rgba(0, 0, 0, 0.37);
+    }
+
+    100% {
+        top: 35%;
+        box-shadow: 0px 28px 17px -4px rgba(0, 0, 0, 0.37);
+    }
+}  */

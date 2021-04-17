@@ -1,0 +1,48 @@
+.request {
+    &__link {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        text-decoration: none;
+        background-color: $color-primary;
+        @include font($pmr, 1.6rem, #fff);
+        transform: translateY(-50%);
+        width: 18rem;
+        height: 5.6rem;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 95;
+        box-shadow: -13px -4px 52px -14px  rgba(0, 0, 0, 0.42);
+        transition: all 0.3s;
+        overflow: hidden;
+        & span{
+            z-index: 2;
+            color: #fff;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: #fff;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 140%;
+            transform: skewX(-43deg) translateX(-103%);
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            &::after {
+                transform: skewX(-42deg) translateX(-27%);
+            }
+
+            span{
+                color: $color-primary;
+            }
+        }
+    }
+}

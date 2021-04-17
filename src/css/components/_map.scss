@@ -1,0 +1,39 @@
+.firstHeading {
+    @include font($pbm, 2rem, $color-blue-light);
+}
+
+.gm-style-iw.gm-style-iw-c {
+    background-color: $color-primary;
+    min-width: 500px !important;
+    min-height: 405px !important;
+}
+
+
+.gm-style-iw-d {
+    overflow: hidden !important;
+    min-height: 405px !important;
+}
+
+.gm-ui-hover-effect {
+    width: 47px !important;
+    height: 54px !important;
+
+    img {
+        width: 25px !important;
+        height: 25px !important;
+    }
+}
+
+.bodyContent {
+    p {
+        @include font($nr, 1.6rem, #fff);
+        line-height: 30px;
+        text-align: center;
+    }
+
+    a {
+        color: $color-blue-dark !important;
+        text-decoration: none;
+        margin-left: 1rem;
+    }
+}

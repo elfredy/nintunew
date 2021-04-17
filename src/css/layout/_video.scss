@@ -1,0 +1,61 @@
+.video{
+    height: 55rem;
+    background-image: url("../../img/videoback.png");
+    background-position: center; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+
+    &__play{
+        font-size: 22px;
+        color: $color-secondary;
+        width: 13rem;
+        height: 13rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 50%;
+        text-decoration: none;
+        animation: pulse 1.6s infinite;
+
+        @include respondmax(md){
+            width: 11rem;
+            height: 11rem;
+        }
+    }
+
+    h1 {
+        @include font($pmr, 4rem, #fff);
+      
+    
+        strong {
+            @include font($pbb);
+            display: block;
+
+        }
+
+        @include respondmax(md){
+           font-size: 3rem;
+           text-align: center;
+           margin-top: 5.5rem;
+        }
+    }
+
+}
+
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255,255,255,.85);
+    }
+    70% {
+        box-shadow: 0 0 0 2em rgba(255,255,255,0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255,255,255,0);
+    }
+}

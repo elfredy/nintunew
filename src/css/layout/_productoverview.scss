@@ -1,0 +1,59 @@
+.productoverview {
+    padding-top: 8.5rem;
+    background-color: #f8f8f8;
+    position: relative;
+    padding-bottom: 3.5rem;
+
+    @include respondmax(sm){
+        padding-top: 4.5rem;
+    }
+
+     h1 {
+        @include font($pmr, 4rem, #000);
+
+        margin-bottom: 1.1rem;
+        strong {
+            @include font($pbb);
+        }
+
+        @include respondmax(sm){
+            text-align: center;
+            font-size: 3rem;
+        }
+    }
+
+    p {
+        @include font($pmr, 1.6rem, #000);
+        line-height: 28px;
+        margin-top: 4rem;
+        @include respondmax(sm){
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        right: 0;
+        top: 8.5rem;
+        box-shadow: -8px 15px 17px -4px rgba(0, 0, 0, 0.37);
+        max-width: 50%;
+
+        @include respondmax(md){
+            display: none !important;
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+        height: 80rem;
+        object-fit: cover;
+    
+    }
+
+    .pe-5{
+        @include respondmax(sm){
+            padding-right: 0 !important;
+        }
+    }
+}

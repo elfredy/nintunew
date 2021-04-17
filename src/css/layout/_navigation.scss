@@ -1,0 +1,40 @@
+.myNavigation {
+
+    @include respondmax(md){
+        display: none;
+    }
+
+    .nav-item {
+        &:not(:last-child) {
+            margin-right: 2.4rem;
+        }
+    }
+    .nav-link {
+        padding: 0 1px !important;
+        display: inline-block;
+        overflow: hidden;
+
+        & span {
+            position: relative;
+            display: inline-block;
+            @include font($pmr, 1.6rem, #000);
+            transition: all 0.3s;
+
+            &::before {
+                color:  $color-blue-light;
+                position: absolute;
+                white-space: nowrap;
+                top: 100%;
+                content: attr(data-hover);
+               
+            }
+        }
+
+        &:hover,
+        &:focus {
+           span{
+            transform: translateY(-100%);
+           }
+        }
+    }
+}

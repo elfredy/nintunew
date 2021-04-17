@@ -1,0 +1,69 @@
+.headerTop {
+    height: 4.5rem;
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+
+    &__left {
+        @include font($pmr, 1.6rem, #fff);
+        text-decoration: none;
+        transition: all 0.3s;
+
+        &:hover{
+         color: $color-blue-light;
+        }
+    }
+
+    &__right {
+        display: flex;
+        a {
+            @include font($pmsb, 1.6rem, #fff);
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            padding: 0;
+            margin: 0;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+            transition: all 0.3s;
+            &:not(:last-child) {
+                margin-right: 2.5rem;
+            }
+
+            &::after {
+                top: 0;
+                left: 0;
+                box-shadow: 0 0 0 3px transparent;
+                transition: all 0.2s;
+                transform: scale(0.8);
+                opacity: 0;
+                pointer-events: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                content: "";
+            }
+
+            &:hover {
+                color: $color-primary;
+                background-color: #fff;
+                border-color: #fff;
+                font-size: 13px;
+                &::after {
+                    box-shadow: 0 0 0 1px #fff;
+                    transform: scale(1.8);
+                    opacity: 0.8;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+}

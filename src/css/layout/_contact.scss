@@ -1,0 +1,78 @@
+.contact {
+   margin-top: -20rem;
+    &__center {
+        height: 20rem;
+        width: 100%;
+        background-image: url("../../img/mapback.png");
+        background-position: center;
+        border-radius: 10px;
+        background-repeat: no-repeat;
+    }
+    h1 {
+        @include font($pmr, 4rem, #fff);
+        text-align: center;
+        
+        strong {
+            @include font($pbb);
+        }
+
+        @include respondmax(sm){
+            font-size: 3rem;
+        }
+
+    }
+
+    &__contactLink{
+        @include font($pmr, 1.6rem, #000);
+        background-color: #fff;
+       
+        width: 20rem;
+        height: 5.8rem;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 7rem;
+        justify-content: center;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+
+        @include respondmax(sm){
+            margin-right: auto;
+            margin-top: 2rem;
+        }
+
+
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: $color-blue-dark;
+            left: 0;
+            top: 0;
+            height: 101%;
+            width: 140%;
+            transform: skewX(-43deg) translateX(-103%);
+            transition: all 0.3s;
+        }
+
+        span{
+            color: #000;
+            z-index: 2;
+            transition: all 0.3s;
+        }
+
+        &:hover{
+            span{
+                color: #fff;
+            }
+
+            &::after{
+                transform: skewX(-43deg) translateX(-27%);
+            }
+        }
+    }
+
+ 
+}

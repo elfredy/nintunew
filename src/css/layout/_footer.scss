@@ -1,0 +1,63 @@
+.footer {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    background-image: url("../../img/footer.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    @include respondmax(sm) {
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+
+    &__bottom {
+        margin-top: 5.6rem;
+    }
+
+    &__logo {
+        display: block;
+        max-width: 28rem;
+        margin-bottom: 2.3rem;
+
+        @include respondmax(sm) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    p {
+        @include font($pmr, 1.6rem, #fff);
+        @include respondmax(sm){
+            font-size: 1.4rem;
+            text-align: center;
+        }
+    }
+
+    &__linkgroup {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10rem;
+
+        @include respondmax(sm) {
+            margin-left: 0;
+            text-align: center;
+        }
+        a {
+            @include font($pmr, 1.6rem, #fff);
+            text-decoration: none;
+            margin-bottom: 2.3rem;
+            transition: all 0.3s;
+            &:hover {
+                color: $color-blue-dark;
+            }
+        }
+    }
+
+    &__sosial{
+        @include respondmax(sm){
+            width: 100%;
+            justify-content: space-around !important;
+        }
+    }
+}

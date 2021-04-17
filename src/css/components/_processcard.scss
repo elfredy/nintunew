@@ -1,0 +1,20 @@
+.processCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        width: 11rem !important;
+        height: 11rem !important;
+    }
+
+    h3 {
+        @include font($pmr, 2rem, #000);
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        strong {
+            @include font($pbb, 2rem, $color-primary);
+        }
+    }
+}
